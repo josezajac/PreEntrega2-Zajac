@@ -1,0 +1,233 @@
+/*La paleta de colores la genere con coolours*/
+
+/*Reseteo y fuentes para todo el sitio*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; 
+    font-style: italic;
+}
+/*Personalizamos el logo dentro de la navbar de bootrap*/
+.logo{
+    color:rgb(242,175,041);
+    font-size: larger;
+}
+
+header{
+    background-color: white;
+}
+body{
+    background-color: rgb(8, 124, 139);
+}
+h2{
+    text-align: center;
+    font-size: 36px;
+    color:white;
+    margin-top: 10px;
+}
+
+/*Le damos estilo a las cards de bootstrap*/
+.card{
+    padding-top: 20px;
+    background-color: rgb(008,123,139);
+    color: white;
+}
+.btn{
+    background-color: rgb(242,175,041);
+}
+
+.sec1{
+    margin-top: 20px;
+    padding: 20px;
+    color: white;
+    font-size: 18px;
+    border: 2px solid white;
+}
+/*mapa importado de google maps*/
+.mapa{
+    width: 100%;
+    text-align: center;
+    color: rgb(238, 229, 233);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+/*Formulario seccion contacto*/
+.formulario {
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgb(238,229,233);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgb(238, 229, 233);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: rgb(021,021,021);
+    color:rgb(238, 229, 233);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgb(179,000,027);
+}
+
+
+/*Galeria.html*/
+
+.home{
+    font-size: 28px;
+    background-color:white;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    border-style: solid 20px;
+    border-color: rgb(021,021,021);
+}
+
+.home a{
+   text-decoration: none;
+   color:rgb(005, 102, 141);
+}
+
+.home a:hover{
+    color: rgb(179,000,027);
+}
+.galeria{
+    width: 100%;
+    height: auto;
+    background-color:rgb(008,123,139);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 200px);
+    padding: 20px;
+    grid-gap: 20px;
+
+}
+
+.item{
+    border: 2px solid white;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    height: 200px;
+}
+
+.item1{
+    background-image: url(/img/1.jpg);
+}
+
+.item2{
+    background-image: url(/img/2.jpg);
+}
+.item3{
+    background-image: url(/img/3.jpg);
+}
+
+.item4{
+    background-image: url(/img/4.jpg);
+}
+.item5{
+    background-image: url(/img/5.jpg);
+}
+
+.item6{
+    background-image:url(/img/6.jpg);
+}
+.item7{
+    background-image: url(/img/7.jpg);
+}
+
+.item8{
+    background-image: url(/img/8.jpg);
+}
+
+.item9{
+    background-image: url(/img/9.jpg);
+}
+
+.item10{
+    background-image: url(/img/10.jpg);
+}
+
+.item11{
+    background-image: url(/img/11.jpg);
+}
+
+.item12{
+    background-image: url(/img/12.jpg);
+}
+/*Inica el footer general*/
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.redes{
+    margin-top: 20px;
+}
+
+footer a{
+    color:white;
+    text-decoration: none;
+    font-size: 40px;
+    letter-spacing: 15px;
+}
+
+/*Inicia media query*/
+/* media query para la galeria, cuando llega a 480px se organiza con dos columnas */
+
+@media screen and (max-width: 320px) {
+    .mapa iframe {
+        width: 100%; /* Establecer el ancho al 100% del contenedor */
+        height:auto; /* Para mantener la proporción de aspecto */
+    }
+}
+
+
+@media only screen and (min-width: 480px) {
+    .galeria{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, 200px);
+    }
+    
+}
+
+/* media query para la galeria, cuando llega a 768px se organiza con tres columnas */
+
+@media only screen and (min-width: 768px) {
+    .galeria{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 200px);
+    }
+    
+}
